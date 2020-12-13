@@ -23,7 +23,7 @@ public class LoginStepDefinitions extends TestBase {
     }
 
     @When("^the user logins into application with \"([^\"]*)\" and password \"([^\"]*)\"$")
-    public void user_login_into_application_with_something_and_password_something(String login, String password) throws Throwable {
+    public void user_login_into_application_with_something_and_password_something(String login, String password) {
         driver.findElement(By.xpath("//input[@name='email']")).sendKeys(login);
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
         driver.findElement(By.xpath("//div[contains(text(),'Login')]")).click();
@@ -43,7 +43,6 @@ public class LoginStepDefinitions extends TestBase {
         expliciteWait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='user-display']")));
         String text = driver.findElement(By.xpath("//span[@class='user-display']")).getText();
         Assert.assertTrue(text.contains(fullname));
-        driver.quit();
     }
 
 }
