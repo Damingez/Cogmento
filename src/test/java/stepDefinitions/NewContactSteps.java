@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewContactSteps extends TestBase {
+
     @When("^the user clicks on New button$")
     public void the_user_clicks_on_new_button() {
         WebDriverWait buttonWait = new WebDriverWait(driver, 3);

@@ -1,7 +1,10 @@
 package stepDefinitions;
 
 import cucumberOptions.TestBase;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 
 public class URLNavigationSteps extends TestBase {
 
@@ -11,5 +14,11 @@ public class URLNavigationSteps extends TestBase {
         driver.navigate().to("https://ui.freecrm.com/contacts");
     }
 
+    @Given("^the user is on Cogmento login page$")
+    public void user_is_on_cogmento_landing_page() {
+        driver.navigate().to("https://ui.freecrm.com/");
+        boolean result = driver.findElement(By.xpath("//div[contains(text(),'Login')]")).isDisplayed();
+        Assert.assertTrue(result);
+    }
 
 }
