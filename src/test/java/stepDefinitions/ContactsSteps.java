@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import cucumberOptions.TestBase;
+import org.kowalix.TestBase;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -55,13 +55,11 @@ public class ContactsSteps extends TestBase {
     public void the_user_clicks_on_the_delete_button() {
         WebDriverWait buttonWait = new WebDriverWait(driver, 4);
         buttonWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='ui button']"))).click();
-     //   buttonWait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='ui tiny modal transition visible active']")));
+
     }
 
     @Then("^number of the contacts equals to: \"([^\"]*)\"$")
     public void number_of_the_contacts_is_equal_to(int number) {
-//        WebDriverWait waitForElements = new WebDriverWait(driver, 5);
-//        waitForElements.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//tbody/tr")));
         int numberOfElements = driver.findElements(By.xpath("//input[@class='hidden']")).size();
         Assert.assertEquals(number, numberOfElements);
     }

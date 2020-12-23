@@ -1,14 +1,12 @@
 package stepDefinitions;
 
-import cucumberOptions.TestBase;
-import io.cucumber.java.en.Given;
+import org.kowalix.TestBase;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 
 public class LoginStepDefinitions extends TestBase {
 
