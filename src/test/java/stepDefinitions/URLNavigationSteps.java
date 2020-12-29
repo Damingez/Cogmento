@@ -13,12 +13,4 @@ public class URLNavigationSteps extends TestBase {
         driver.navigate().to("https://ui.freecrm.com/contacts");
     }
 
-    @Given("^the user is on Cogmento login page$")
-    public void user_is_on_cogmento_landing_page() {
-        driver.navigate().to(properties.getProperty("url"));
-    //    driver.get(properties.getProperty("url"));
-        boolean result = driver.findElement(By.xpath("//div[contains(text(),'Login')]")).isDisplayed();
-        Assert.assertTrue(result);
-    }
-
 }

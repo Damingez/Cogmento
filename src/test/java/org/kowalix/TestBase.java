@@ -13,15 +13,17 @@ public  class TestBase {
     public static WebDriver driver;
     public static Properties properties;
 
-    public static WebDriver getDriver() throws IOException {
-        properties = new Properties();
-        FileInputStream file = new FileInputStream("C:\\Users\\dako\\Desktop\\testing_projects\\Cogmento\\src\\test\\java\\org\\kowalix\\global.properties");
-        properties.load(file);
+    public WebDriver getDriver()   {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\dako\\Documents\\driver_for_practise\\chromedriver.exe");
-
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver;
+    }
+
+    public static void init() throws IOException {
+        properties = new Properties();
+        FileInputStream file = new FileInputStream("C:\\Users\\dako\\Desktop\\testing_projects\\Cogmento\\src\\test\\java\\org\\kowalix\\global.properties");
+        properties.load(file);
     }
 
 

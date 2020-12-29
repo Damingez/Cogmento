@@ -11,13 +11,14 @@ public class Hooks extends TestBase {
 
     public WebDriver driver;
 
-    @Before("@SmokeTest")
+    @Before
     public void beforeTest() throws IOException {
+        init();
         driver = getDriver();
     }
 
 
-    @After("@SmokeTest")
+    @After
     public void afterTest() {
         driver.quit();
     }
