@@ -4,7 +4,7 @@ Feature: Creation/removal of contact
     Given the user is on Cogmento login page
     When the user logins into application with "kowalix93@gmail.com" and password "testy1234"
     Then Home page is populated
-    And the user Fullname "Damianoi Komenoi" is displeyed in the upper panel
+    And the user Fullname "Damianoi Komenoi" is displayed in the upper panel
 
   @SmokeTest
   Scenario: Add contact with mandatory fields
