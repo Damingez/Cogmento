@@ -1,19 +1,19 @@
 package stepDefinitions;
 
-import org.kowalix.TestBase;
+import org.kowalix.Base;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 
-public class Hooks extends TestBase {
+public class Hooks extends Base {
 
     public WebDriver driver;
 
     @Before
     public void beforeTest() throws IOException {
-        init();
+       // init();
         driver = getDriver();
     }
 

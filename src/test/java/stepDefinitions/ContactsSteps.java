@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import org.kowalix.TestBase;
+import org.kowalix.Base;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ContactsSteps extends TestBase {
+public class ContactsSteps extends Base {
 
     @When("^the user clicks on New button$")
     public void the_user_clicks_on_new_button() {

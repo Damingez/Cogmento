@@ -3,10 +3,10 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.kowalix.TestBase;
+import org.kowalix.Base;
 import pageObjects.HomePage;
 
-public class HomePageSteps extends TestBase {
+public class HomePageSteps extends Base {
 
     public HomePage getHomePage() {
         return new HomePage(driver);

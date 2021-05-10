@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+public class HomePage extends Page {
 
     @FindBy(xpath = "//div[@class='three column row']")
     private WebElement tableWithRows;
@@ -15,7 +15,7 @@ public class HomePage {
     protected WebDriver driver;
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 

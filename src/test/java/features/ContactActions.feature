@@ -6,7 +6,7 @@ Feature: Creation/removal of contact
     Then Home page is populated
     And the user Fullname "Damianoi Komenoi" is displayed in the upper panel
 
-  @SmokeTest
+  @SmokeTest2
   Scenario: Add contact with mandatory fields
     When the user uses URL to navigate to Contacts page
     And the user clicks on New button
@@ -17,8 +17,8 @@ Feature: Creation/removal of contact
 
   @SmokeTest
   Scenario: Contact deletion process
-    When the user uses URL to navigate to Contacts page
-    And Contact with name: "Maro Slusarczyk" exists
-    When the user clicks on trash icon of contact: "Maro Slusarczyk"
+    Given the user is on Cogmento login page
+    When Contact with name: "Maro Slusarczyk" exists
+    And the user clicks on trash icon of contact: "Maro Slusarczyk"
     And the user clicks on the delete button
     Then number of the contacts equals to: "6"
